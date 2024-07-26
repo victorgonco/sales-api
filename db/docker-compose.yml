@@ -1,0 +1,12 @@
+services:
+  db: 
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: sales-db
+      POSTGRES_PASSWORD: 123456
+    volumes:
+      - "pgdata:/var/lib/postgresql/data"
+volumes:
+  pgdata:

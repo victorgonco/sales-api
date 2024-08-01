@@ -17,5 +17,5 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 echo "Effective installing docker and docker tools"
 sudo apt-get update > /dev/null && sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin > /dev/null
-
 echo "Running compose to create database"
+cd /vagrant/ && sudo docker compose up --force-recreate -d > /dev/null
